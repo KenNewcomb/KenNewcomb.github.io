@@ -27,7 +27,7 @@ a:hover {
 
 html,
 body {
-  font-family:"monospace";
+  font-family:"Lucida Console", "Monoco","monospace";
   height: 100%;
   background-color: #000000;
 }
@@ -69,12 +69,12 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   color: #00FF00;
-  font-family:"monospace";
+  font-family:"Lucida Console", "Monoco","monospace";
 }
 
 .masthead-nav > li {
   display: inline-block;
-  font-family:"monospace";
+  font-family:"Lucida Console", "Monoco","monospace";
   color:#00FF00;
 }
 .masthead-nav > li + li {

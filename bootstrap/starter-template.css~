@@ -5,3 +5,12 @@ body {
   padding: 40px 15px;
   text-align: center;
 }
+
+a.navbar-brand:hover {
+  color: #00CC00;
+}
+.navbar {
+  background-color: #000000;
+}
+
+

@@ -22,7 +22,15 @@
 <b>A2.</b> To find the structure associated with the globally minimum energy, steric hindrances were first minimized. In addition, hydrogen bonding between the carbonyl and amine groups is favorable and contributes to the minimum energy state. According to Wikipedia, a Ramachandran plot is a method of comparing two protein backbone dihedral angles, psi and phi. In the capped alanine structure, angle psi is  168.7 degrees, while angle phi is 21.9 degrees.
 <br>
 <br>
-<b>Q3.</b><em> In this problem, the goal is to compute the lowest energy structure for the pentapeptide met-enkephalin, whose sequence is Tyr-Gly-Gly-Phe-Met. Met-enkephalin is an opioid peptide neurotransmitter. Many local minima exist for this molecule, so it is a challenge to reach the global minimum.
+<b>Q3.</b><em> In this problem, the goal is to compute the lowest energy structure for the pentapeptide met-enkephalin, whose sequence is Tyr-Gly-Gly-Phe-Met. Met-enkephalin is an opioid peptide neurotransmitter. Many local minima exist for this molecule, so it is a challenge to reach the global minimum.</em>
 <br>
 <br>
-<b>A3.</b><em> 
+<b>A3.</b> Protein structure optimization is not a trivial task. Proteins are polymers of amino acids, each with a different "side chain". Proteins can be extremely large molecules and can "fold" in 3-dimensional space to minimize the free energy. In nature, proteins find their globally minimum energy state. Computationally, this is a difficult task because for any given protein, there are is an enormous amount of local minima that the protein can find. Standard minimization methods, like steepest descent and conjugate gradients, only guarantee a local minimum.
+<br>
+<br>
+To minimize the energy of the Tyr-Gly-Gly-Phe-Met peptide using Avogadro, several tactics were employed. Firstly, I recognized that there is a strong, long-range interaction between the positively charged NH3+ terminus and the negatively charged COO- terminus that could not be neglected. Secondly, there were many opportunities for hydrogen bonding between carbonyl carbons and amine hydrogens. Lastly, steric hindrance between particularly large groups was minimized. Below is a picture of my optimized peptide.
+<br>
+<br>
+<img src="optimized_peptide.png"
+<br>
+The lowest energy that was achieved was -13.9 kJ/mol. This is certainly not the global minimum(which would be very difficult to verify), but is a satisfactory attempt. You can download the Cartesian coordinate file below by clicking <a href ="peptide.cml">here</a>.

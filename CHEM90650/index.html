@@ -1,0 +1,28 @@
+<html>
+<title>Computational Exercise 2: Structure optimization with Avogradro</title>
+<body>
+<center><h1>Computational Exercise 2</h1></center>
+<center><h2>Structure optimization with Avogadro</h2></center>
+<br>
+<br>
+<b>by: Ken Newcomb</b>
+<br>
+<b>Due Date: 02.20.15</b>
+<br>
+<br>
+<b>Q1.</b> <em> What is the optimum phenyl-phenyl dihedral angle in biphenyl? What is the experimental value? How was the experimental value derived? Why might yours differ? Why did you get different results when you started the calculation from the planar biphenyl vs. 90 degree biphenyl? Which optimized structure is correct?</em>
+<br>
+<br>
+<b>A1.</b> The optimum phenyl-phenyl dihedral angle that I achieved using Avogadro was 54 degrees. In a paper in the Journal of Chemical Theory and Computation, "Torsional Barriers and Equilibrium Angle of Biphenyl: Reconciling Theory with Experiment", the dihedral angle was listed as 44.4 degrees. This value was derived from electron diffraction techniques. My value differs because it is based on a force field, which inherently is an approximation of the true forces each atom experiences. Difference force fields will yield different dihedral angles. In addition, if you start the energy minimization at ~ 90 degrees, the minimizer will get caught in a local minimum. Neither optimized structure is truly correct, since we can never know the true global minimum without sampling the entire configurational space. However, the 54 degree dihedral angle more closely matches the experimental value.
+<br>
+<br>
+<b>Q2.</b><em> When you find a low-energy structure for the capped alanine, what chemical interactions were stabilizing the structure? What is a Ramachandran plot? What do your values of phi and psi correspond to on the Ramachandran plot?</em>
+<br>
+<br>
+<b>A2.</b> To find the structure associated with the globally minimum energy, steric hindrances were first minimized. In addition, hydrogen bonding between the carbonyl and amine groups is favorable and contributes to the minimum energy state. According to Wikipedia, a Ramachandran plot is a method of comparing two protein backbone dihedral angles, psi and phi. In the capped alanine structure, angle psi is  168.7 degrees, while angle phi is 21.9 degrees.
+<br>
+<br>
+<b>Q3.</b><em> In this problem, the goal is to compute the lowest energy structure for the pentapeptide met-enkephalin, whose sequence is Tyr-Gly-Gly-Phe-Met. Met-enkephalin is an opioid peptide neurotransmitter. Many local minima exist for this molecule, so it is a challenge to reach the global minimum.
+<br>
+<br>
+<b>A3.</b><em> 

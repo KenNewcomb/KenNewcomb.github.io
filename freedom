@@ -1,3 +1,4 @@
+clear
 date1=$(date --utc --date "2016-12-27" +%s)
 date2=$(date +%s)
 diffdays=$(( (date2-date1)/(3600*24) ))

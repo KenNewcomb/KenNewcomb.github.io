@@ -1,7 +1,0 @@
-clear
-echo "-----Ken's Freedom Project-----"
-resetdate=$(date --utc --date "2016-12-29" +%s)
-currentdate=$(date +%s)
-diffdays=$(( (currentdate-resetdate)/(3600*24) ))
-echo "Ken has been free" $diffdays "days."
-

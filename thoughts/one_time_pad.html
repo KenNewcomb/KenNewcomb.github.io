@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Ken Newcomb</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../bootstrap/cover.css" rel="stylesheet">
+
+    <script src="../bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="thoughthead clearfix">
+            <div class="inner">
+              <a href="http://ken.rocks"><h3 class="masthead-brand">Ken Newcomb</h3></a>
+              <ul class="nav masthead-nav">
+                <li><a href="http://ken.rocks/">About Ken</a></li>
+                <li><a href="cv.pdf">Resume/CV</a></li>
+                <li><a href="http://ken.rocks/blog/">Thoughts</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="inner cover">
+              <br>
+              <h3><strong>01.08.2015</strong> - Cryptography and the One-Time Pad</h3>
+              <hr width="100%">
+              <div align="left">
+                  Whether you realize it or not, you probably use cryptography dozens of times each day. Cryptography allows us to send and receive text messages, make financial transactions, and access our email, all with confidentiality. How can this be achieved? With math.
+                <br><br>
+                <center><h4>How does cryptography work?</h4></center>
+                <br>
+                In simple terms, cryptography employs an encryption algorithm (a cypher) to convert a human-readable <strong>plaintext</strong> into a garbled <strong>cyphertext</strong>. A common example of encryption can be found in the daily newspaper: a cryptogram. Each letter of the cryptogram's cyphertext is mapped to a different letter in the plaintext. This is formally known as a substitution cypher. By analyzing patterns and the structure of the text, one can determine the mapping and decode the puzzle.
+                <br><br>
+                There are various encryption schemes that exist. By hand, some cyphers can be very challenging to break. However, with the use of a computer, breaking simple encryption schemes is trivial. To secure data in the digital age, cryptography needs to be cleverly implemented.
+                <br><br>
+                Encryption over the internet is typically performed with a technique known as public-key cryptography. Suppose two parties, A and B, want to securely transmit messages over a line that is assumed to be monitored by a malicious third party. Party A uses a sequence of random numbers known as a <strong>public key</strong> to encrypt the message to be sent. The message travels across the line to Party B, who decrypts it with a <strong>private key</strong>. The two keys are mathematically linked, but one cannot be derived from the other. This is achieved by the use of a one-way function: a function that is computationally cheap to evaluate, but computationally expensive to invert. One of the most popular encryption schemes used today is the RSA algorithm, which derives its strength from the problem of large integer factorization (for which no efficient algorithm is known, at least not without <a href="https://en.wikipedia.org/wiki/Shor%27s_algorithm"> quantum computing</a>...) While an attacker may gain access to the both public keys, he cannot decrypt the message without the private keys.
+                <br><br>
+                <center><h4>The One-Time Pad</h4></center>
+                <br>
+                While it is likely that correctly implemented public key encryption is secure for most purposes (a big assumption, see the <a href='https://en.wikipedia.org/wiki/Heartbleed'>Heartbleed bug</a>, is there an encryption scheme that is theoretically unbreakable? In other words, is there a way to encrypt data in such a way that the plaintext cannot be retrieved by looking at an arbitary amount of cyphertext? The answer is yes: the one-time pad.
+                <br><br>
+                The scheme is suprisingly simple: take any binary message and a random bit stream and apply the [exclusive or](https://en.wikipedia.org/wiki/Exclusive_or) operation. Exclusive or produces a 1 if the bits are the distinct, and a 0 if the bits are the same. To decrypt, simply repeat the operation with the same key. The one-time pad is impervious to cyphertext attacks given the following (significant) constraints:
+                <br><br>
+                1. The key is the same length of the message (and never repeated).
+                <br>
+                2. The key is truly random (I'll leave cryptographically secure random numbers for another time).
+                <br>
+                3. The key is kept secret.
+                <br><br>
+                The one-time pad is not widely used because of these extremely inconvenient constraints. However, the one-time pad could prove useful in situations where security is absolutely critical (or against a very <a href='https://en.wikipedia.org/wiki/National_Security_Agency'>well-funded eavesdropper)</a>.
+                <br><br>
+                <center><h4>In conclusion...</h4></center>
+                <br>
+                Take a look at the URL in your address bar right now. The "https" prefix indicates that encryption is being used. If everything has been implemented correctly, the content of this webpage has been securely transmitted to you. Encryption is important to modern society, so get to know it!
+                <br>
+              <!--After you get 5 or 10 thoughts, uncomment! -->
+              <!--<a href='earlier.html'>earlier thoughts</a> -->
+            </div>
+          </div>
+
+          <div class="thoughtfoot">
+            <div class="inner">
+              <p>Follow me on <a href="http://github.com/KenNewcomb">Github!</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap/assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>

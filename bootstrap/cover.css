@@ -86,7 +86,7 @@ body {
   padding-left: 0;
   font-size: 16px;
   font-weight: bold;
-  color: #00FF00;; /* IE8 proofing */
+  color: #00FF00; /* IE8 proofing */
   border-bottom: 2px solid transparent;
 }
 .masthead-nav > li > a:hover,
@@ -149,6 +149,14 @@ body {
     position: fixed;
     bottom: 0;
   }
+  .thoughthead {
+    position: relative;
+  }
+  .thoughtfoot {
+    position: relative;
+  }
+
+
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
@@ -156,6 +164,8 @@ body {
   /* Handle the widths */
   .masthead,
   .mastfoot,
+  .thoughthead,
+  .thoughtfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
@@ -164,6 +174,8 @@ body {
 @media (min-width: 992px) {
   .masthead,
   .mastfoot,
+  .thoughthead,
+  .thoughtfoot,
   .cover-container {
     width: 700px;
   }

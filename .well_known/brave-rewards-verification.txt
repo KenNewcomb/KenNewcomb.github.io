@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ken.rocks
+Token: 3b522474493c319b6f9def459bd3967f171086052e8b22f02d31d02c5b680d0d

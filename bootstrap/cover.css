@@ -179,4 +179,10 @@ body {
   .cover-container {
     width: 700px;
   }
+  .donate {
+    font-size: 18px;
+    width: 750px;
+    text-align: center;
+  }
+
 }

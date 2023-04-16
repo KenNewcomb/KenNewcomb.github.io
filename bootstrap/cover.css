@@ -185,4 +185,7 @@ body {
     text-align: center;
   }
 
+  .bitcoin {
+    padding-top: 75px;
+    text-align: left;
 }

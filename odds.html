@@ -1,0 +1,281 @@
+
+<h1>Ken's NFL Forecasts</h1>
+<h2 style="text-decoration: underline;">Model Description</h2>
+My model is a neural network-based <a href="https://en.wikipedia.org/wiki/Statistical_classification">classifier</a>,
+designed to
+estimate the probability of a particular NFL
+team winning a matchup.<br>
+The dataset used to build the model is provided by <a href="https://www.pro-football-reference.com/years/2022/" target="_blank">Pro Football
+Reference</a>.<br>
+<h2 style="text-decoration: underline;">Week 3 Odds<br>
+</h2>
+Pick Distribution (based on sportsbook odds): 8 Favorites, 2 Underdogs<br>
+<br>
+<table border="1">
+  <tbody>
+    <tr>
+      <th>Model Favorite<br>
+      </th>
+      <th>Model Odds<br>
+      </th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Book
+Odds</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Edge</span><br>
+      </td>
+      <th>Model Underdog<br>
+      </th>
+      <th>Model Odds<br>
+      </th>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Book
+Odds</span><br>
+      </td>
+      <td style="vertical-align: top;"><span style="font-weight: bold;">Edge</span><br></td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 0); font-weight: bold;">Buffalo Bills</td>
+      <td style="background-color: rgb(255, 204, 0);" align="center">-456</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 0);">-245<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 0);">11%<br>
+      </td>
+      <td>Washington Commanders</td>
+      <td align="center">+456</td>
+      <td style="vertical-align: top; text-align: center;">+200<br>
+      </td>
+      <td style="vertical-align: top;">-15%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Miami Dolphins</td>
+      <td align="center">-203</td>
+      <td style="vertical-align: top; text-align: center;">-250<br>
+      </td>
+      <td style="vertical-align: top;">-4%<br>
+      </td>
+      <td>Denver Broncos</td>
+      <td align="center">+203</td>
+      <td style="vertical-align: top; text-align: center;">+205<br>
+      </td>
+      <td style="vertical-align: top;">0%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51);">Jacksonville
+Jaguars</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-669</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-345<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">9%<br>
+      </td>
+      <td>Houston Texans</td>
+      <td align="center">+669</td>
+      <td style="vertical-align: top; text-align: center;">+275<br>
+      </td>
+      <td style="vertical-align: top;">-14%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51); font-weight: bold;">Detroit Lions</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-317</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-166<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">14%<br>
+      </td>
+      <td>Atlanta Falcons</td>
+      <td align="center">+317</td>
+      <td style="vertical-align: top; text-align: center;">+140<br>
+      </td>
+      <td style="vertical-align: top;">-18%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Baltimore Ravens</td>
+      <td align="center">-400</td>
+      <td style="vertical-align: top; text-align: center;">-360<br>
+      </td>
+      <td style="vertical-align: top;">2%<br>
+      </td>
+      <td>Indianapolis Colts</td>
+      <td align="center">+400</td>
+      <td style="vertical-align: top; text-align: center;">+285<br>
+      </td>
+      <td style="vertical-align: top;">-6%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>New England Patriots</td>
+      <td align="center">-108</td>
+      <td style="vertical-align: top; text-align: center;">-142<br>
+      </td>
+      <td style="vertical-align: top;">-7%<br>
+      </td>
+      <td>New York Jets</td>
+      <td align="center">+108</td>
+      <td style="vertical-align: top; text-align: center;">+120<br>
+      </td>
+      <td style="vertical-align: top;">3%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51); font-weight: bold;">Minnesota Vikings</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-233</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-118<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">16%<br>
+      </td>
+      <td>Los Angeles Chargers</td>
+      <td align="center">+233</td>
+      <td style="vertical-align: top; text-align: center;">-102<br>
+      </td>
+      <td style="vertical-align: top;">-20%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Cleveland Browns</td>
+      <td align="center">-100</td>
+      <td style="vertical-align: top; text-align: center;">-166<br>
+      </td>
+      <td style="vertical-align: top;">-12%<br>
+      </td>
+      <td style="background-color: rgb(255, 204, 51);">Tennessee Titans</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">+100</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">+140<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">8%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51);">Green Bay Packers</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-150</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-118<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">6%<br>
+      </td>
+      <td>New Orleans Saints</td>
+      <td align="center">+150</td>
+      <td style="vertical-align: top; text-align: center;">-102<br>
+      </td>
+      <td style="vertical-align: top;">-10%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Seattle Seahawks</td>
+      <td align="center">-163</td>
+      <td style="vertical-align: top; text-align: center;">-218<br>
+      </td>
+      <td style="vertical-align: top;">-7%<br>
+      </td>
+      <td>Carolina Panthers</td>
+      <td align="center">+163</td>
+      <td style="vertical-align: top; text-align: center;">+180<br>
+      </td>
+      <td style="vertical-align: top;">2%<br>
+      </td>
+    </tr>
+    <tr>
+      <td>Dallas Cowboys</td>
+      <td align="center">-614</td>
+      <td style="vertical-align: top; text-align: center;">-675<br>
+      </td>
+      <td style="vertical-align: top;">-1%<br>
+      </td>
+      <td>Arizona Cardinals</td>
+      <td align="center">+614</td>
+      <td style="vertical-align: top; text-align: center;">+490<br>
+      </td>
+      <td style="vertical-align: top;">-3%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51);">Kansas City
+Chiefs</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-1900</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-650<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">8%<br>
+      </td>
+      <td>Chicago Bears</td>
+      <td align="center">+1900</td>
+      <td style="vertical-align: top; text-align: center;">+470<br>
+      </td>
+      <td style="vertical-align: top;">-13%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51); font-weight: bold;">Pittsburgh
+Steelers</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-170</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">+124<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">18%<br>
+      </td>
+      <td>Las Vegas Raiders</td>
+      <td align="center">+170</td>
+      <td style="vertical-align: top; text-align: center;">-148<br>
+      </td>
+      <td style="vertical-align: top;">-23%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51);">Philadelphia
+Eagles</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-300</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-218<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">6%<br>
+      </td>
+      <td>Tampa Bay Buccaneers</td>
+      <td align="center">+300</td>
+      <td style="vertical-align: top; text-align: center;">+180<br>
+      </td>
+      <td style="vertical-align: top;">-11%<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="background-color: rgb(255, 204, 51); font-weight: bold;">Cincinnati
+Bengals</td>
+      <td style="background-color: rgb(255, 204, 51);" align="center">-1329</td>
+      <td style="vertical-align: top; text-align: center; background-color: rgb(255, 204, 51);">-142<br>
+      </td>
+      <td style="vertical-align: top; background-color: rgb(255, 204, 51);">34%<br>
+      </td>
+      <td>Los Angeles Rams</td>
+      <td align="center">+1329</td>
+      <td style="vertical-align: top; text-align: center;">+120<br>
+      </td>
+      <td style="vertical-align: top;">-38%<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+Teams with a positive
+expectation of profit (model odds are significantly greater than book odds) are
+highlighted in <span style="background-color: rgb(255, 204, 0);">gold</span>.<br><span style="font-weight: bold;">Bold font</span> indicates the best picks.<br>
+Forecasts
+published on Sept. 24th, 2023 at 10:19am.<span style="background-color: rgb(255, 204, 0);"><span style="background-color: white;"></span></span><br><h2><span style="background-color: rgb(255, 204, 0);"><span style="background-color: white;"></span></span></h2>
+<ul>
+</ul>
+<span style="text-decoration: underline;"><br>
+</span>
+<h2 style="text-decoration: underline; text-align: left;">Week 3 Final
+Results:</h2>
+<ul>
+  <li>Model Accuracy: TBD.<br>
+  </li>
+  <li>Return: TBD.<br>
+  </li>
+</ul>
+<span style="text-decoration: underline;"><br>
+Disclaimer: This project is in
+early development and may generate skewed odds. It should not be used
+to
+place bets.<br>
+<h2 style="text-decoration: underline;">Previous Forecasts:</h2>
+<ul>
+  <li><a href="odds/nfl/2023w2.html">Week 2 - 2023</a></li>
+</ul>
+<span style="font-weight: bold;"></span><br>
+</span><br>
+<br>
+<span style="text-decoration: underline;"></span>

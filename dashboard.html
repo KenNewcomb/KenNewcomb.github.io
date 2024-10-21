@@ -1,0 +1,80 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Bitcoin Dashboard">
+        <meta name="author" content="Your Name">
+        <title>Bitcoin Dashboard</title>
+        <link href="bootstrap/cover.css" rel="stylesheet">
+        <style>
+          .tooltip {
+            position: relative;
+            display: inline-block;
+          }
+          .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 400px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%; /* Position the tooltip above the text */
+            left: 10%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+          }
+          .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+          }
+          .data-row {
+            display: flex;
+            justify-content: space-between;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="site-wrapper">
+          <div class="site-wrapper-inner">
+            <div class="cover-container">
+              <div class="masthead clearfix">
+                <div class="inner">
+                  <h1 class>Ken's Bitcoin Dashboard</h1>
+                <a href="https://ken.rocks"><---- Back to homepage</a>
+                </div>
+              </div>
+              <div class="inner cover">
+                <h2 class="cover-heading">Protocol Status</h2>
+                Hover over a category to learn more.
+                <br>
+                <br>
+                <div class="data-row tooltip">Latest Block:<span>866773</span>
+                  <span class="tooltiptext">The number of blocks since Satoshi mined the first block in late 2009.</span>
+                </div>
+                <br>
+                <div class="data-row tooltip">Exchange Rate:<span>~$68K (1479 sats/$)</span>
+                  <span class="tooltiptext">The current exchange rate of bitcoin.</span>
+                </div>
+                <br>
+                <div class="data-row tooltip">Inflation Rate (annualized):<span>0.8308%</span>
+                  <span class="tooltiptext">The annualized inflation rate based on the current block subsidy and total bitcoins mined to date.</span>
+                </div>
+              </div>
+              <div class="mastfoot">
+                <div class="inner">
+                  <p>Last updated 10/21/2024 06:44 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+    

@@ -25,8 +25,7 @@
             position: absolute;
             z-index: 1;
             bottom: 125%; /* Position the tooltip above the text */
-            left: 10%;
-            transform: translateX(-50%);
+            left: 30%;
             opacity: 0;
             transition: opacity 0.3s;
           }
@@ -34,11 +33,35 @@
             visibility: visible;
             opacity: 1;
           }
-          .data-row {
+                    .data-row {
             display: flex;
             justify-content: space-between;
+            padding: 10px;
+            transition: background-color 0.3s, color 0.3s;
+          }
+          .data-row:hover {
+            background-color: #f0f0f0;
+            color: #000
+          }
+          #description {
+            height: 3em; /* Adjust this value as needed */
+            overflow: hidden;
           }
         </style>
+        <script>
+          function showDescription(text,element) {
+            document.getElementById('description').innerText = text;
+            document.getElementById('description').style.color = 'red'
+
+
+          }
+          function resetDescription() {
+            document.getElementById('description').innerText = 'Hover over any quantity to learn more.';
+            document.getElementById('description').style.color = 'white'
+
+
+          }
+        </script>
       </head>
       <body>
         <div class="site-wrapper">
@@ -52,29 +75,24 @@
               </div>
               <div class="inner cover">
                 <h2 class="cover-heading">Protocol Status</h2>
-                Hover over any quantity to learn more.
+                <p id="description">Hover over any quantity to learn more.</p>
                 <br>
-                <br>
-                <div class="data-row tooltip">Latest Block:<span>866,886</span>
-                  <span class="tooltiptext">The number of blocks mined since the genesis block in 2009.</span>
+                <div class="data-row tooltip" onmouseover="showDescription('The number of blocks mined since the genesis block in 2009.')" onmouseout="resetDescription()">Latest Block:<span>866,889</span>
                 </div>
                 <br>
-                <div class="data-row tooltip">Exchange Rate:<span>~$67543 (1481 sats/$)</span>
-                  <span class="tooltiptext">The current USD/BTC exchange rate.</span>
+                <div class="data-row tooltip" onmouseover="showDescription('The current USD/BTC exchange rate.')" onmouseout="resetDescription()">Exchange Rate:<span>~$67494 (1482 sats/$)</span>
                 </div>
                 <br>
-                <div class="data-row tooltip">Current Supply/Total Supply:<span>19,771,496/21,000,000<span>
-                  <span class="tooltiptext">The current supply and long-term supply limit of bitcoin.</span>
+                <div class="data-row tooltip" onmouseover="showDescription('The current supply and long-term supply limit of bitcoin.')" onmouseout="resetDescription()">Current Supply / Total Supply:<span>19,771,509 / 21,000,000<span>
                 </div>
                 <br>
-                <div class="data-row tooltip">Inflation Rate (annualized):<span>0.83074%</span>
-                  <span class="tooltiptext">The annualized inflation rate based on the current block reward and total bitcoin supply.</span>
+                <div class="data-row tooltip" onmouseover="showDescription('The annualized inflation rate based on the current block reward and total bitcoin supply.')" onmouseout="resetDescription()">Inflation Rate (annualized):<span>0.83074%</span>
                 </div>
               </div>
               <div class="mastfoot">
                 <div class="inner">
                   <p>Dashboard refreshed every 6 hours: blockchain data provided by my local bitcoin node, economic data provided by FRED and Blockchair.
-                  <p>Last updated 10/22/2024 03:31 PM</p>
+                  <p>Last updated 10/22/2024 04:20 PM</p>
                 </div>
               </div>
             </div>
